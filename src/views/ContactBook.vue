@@ -93,7 +93,7 @@ export default {
     methods: { 
         async retrieveContacts() { 
             try {
-                this.contacts = await ContactService.getAll(); 
+                this.contacts = await ContactService.getAll();
             } catch (error) { 
                 console.log(error); 
             } 

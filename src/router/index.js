@@ -23,6 +23,18 @@ const routes = [
         component: () => import("@/views/Contactadd.vue"), 
        
     },
+    { 
+        path: "/Login/", 
+        name: "Login", 
+        component: () => import("@/views/UserLogin.vue"), 
+       
+    },
+    { 
+        path: "/register/", 
+        name: "register", 
+        component: () => import("@/views/Userregister.vue"), 
+       
+    },
 ];
 const router = createRouter({ 
     history: createWebHistory(import.meta.env.BASE_URL), 

@@ -3,7 +3,7 @@
         <h4>Thêm Liên hệ</h4> 
         <ContactForm 
         :contact="contact"
-        @submit:contact="contact"
+        @submit:contact="Createdcontact"
         />
         <p>{{ message }}</p> 
     </div> 
@@ -17,13 +17,7 @@ export default {
     },
     data() { 
         return { 
-            contact: {
-                name:"",
-                email:"",
-                address:"",
-                phone:"",
-                favorite:false
-            }, 
+            contact: null, 
             message: "", 
         }; 
     },
@@ -37,6 +31,15 @@ export default {
             } 
         }
     },
-   
+    created() { 
+        this.contact={
+                name:"",
+                email:"",
+                address:"",
+                phone:"",
+                favorite:false
+            };
+        this.message = ""; 
+    }, 
 };
 </script>
